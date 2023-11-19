@@ -32,9 +32,71 @@ const stydent = {
     isMarried: true
 }
 
-const students = {}  // new Object
+const student = {}  // new Object
 const array = []  // new Array()
 
 // new Function()
 // new Map()
 // new Date()
+
+
+
+
+
+
+
+
+
+
+// второе занятие по JS
+
+
+const students = [
+    {
+        name: "Bob",
+        age: 22,
+        isMarried: true,
+        scores: 85,
+    },
+    {
+        name: "Alex",
+        age: 21,
+        isMarried: true,
+        scores: 89
+    },
+    {
+        name: "Nick",
+        age: 20,
+        isMarried: false,
+        scores: 120
+    },
+    {
+        name: "John",
+        age: 19,
+        isMarried: false,
+        scores: 100
+    }
+];
+
+
+console.log(students.map(elem => elem.name))
+console.log(students.map(elem => ({...elem, isMarried: true})))
+
+
+
+const numbers = [1, -2, -3, 4];
+
+const getNumbers = (array) => {
+  const newArray = [];
+  array.map((item) => {
+    if (item >= 0) {
+      newArray.push(item * 2);
+    }
+  });
+  console.log(newArray);
+};
+
+getNumbers(numbers);
+
+console.log(numbers.map(elem => elem >= 0 ? elem * 2 : ''))
+
